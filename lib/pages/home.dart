@@ -129,9 +129,128 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
+            ),
+            Container(
+              child:
+                  DraggableScrollableSheet(builder: (context, scrollContainer) {
+                return Container(
+                  decoration: BoxDecoration(
+                    color: kWhite,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(40),
+                    ),
+                  ),
+                  padding: const EdgeInsets.only(
+                    left: 21,
+                    right: 30,
+                    top: 21,
+                  ),
+                  child: Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 18),
+                        child: SingleChildScrollView(
+                          controller: scrollContainer,
+                          child: Column(
+                            children: [
+                              Center(
+                                child: Text(
+                                  "Transaction History",
+                                  style: text18Semibold.copyWith(
+                                      color: kLuckyBlue),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 31,
+                              ),
+                              _transactionList(
+                                  kTreeGreen.withOpacity(0.2),
+                                  "assets/icons/triangle-up.png",
+                                  "Success!",
+                                  "February 19, 03:25 PM",
+                                  "+ 100.000"),
+                              _transactionList(
+                                  kTreeGreen.withOpacity(0.2),
+                                  "assets/icons/triangle-up.png",
+                                  "Success!",
+                                  "February 16, 01:25 PM",
+                                  "+ 150.000"),
+                              _transactionList(
+                                  kOrange.withOpacity(0.2),
+                                  "assets/icons/triangle-down.png",
+                                  "Starbucks Drinks",
+                                  "February 10, 12:25 PM",
+                                  "- 110.000"),
+                              _transactionList(
+                                  kOrange.withOpacity(0.2),
+                                  "assets/icons/triangle-down.png",
+                                  "Payment #Invest",
+                                  "February 5, 11:05 PM",
+                                  "- 130.000")
+                            ],
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          height: 4,
+                          width: 49,
+                          color: kEgyptianBlue.withOpacity(0.1),
+                        ),
+                      )
+                    ],
+                  ),
+                );
+              }),
             )
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _transactionList(
+      Color bgColor, String icon, String title, String sub, String amount) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 30),
+      child: Row(
+        children: [
+          SizedBox(
+            height: 30,
+            width: 30,
+            child: CircleAvatar(
+              backgroundColor: bgColor,
+              child: Image(
+                image: AssetImage(icon),
+                width: 14,
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: text13Medium.copyWith(color: kLuckyBlue),
+              ),
+              Text(
+                sub,
+                style: text10Medium.copyWith(color: kLightGray),
+              )
+            ],
+          ),
+          Spacer(),
+          Text(
+            amount,
+            style: text13Semibold.copyWith(
+              color: kLuckyBlue,
+            ),
+          )
+        ],
       ),
     );
   }
