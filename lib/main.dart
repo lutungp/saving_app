@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Saving Page',
       routes: {
-        OnBoardingPage.nameRoute: (context) => OnBoardingPage(),
-        MainPage.nameRoute: (context) => MainPage(),
+        OnBoardingPage.nameRoute: (context) => const OnBoardingPage(),
+        MainPage.nameRoute: (context) => const MainPage(),
       },
     );
   }

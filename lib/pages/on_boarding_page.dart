@@ -15,21 +15,21 @@ class OnBoardingPage extends StatelessWidget {
         color: kTropicalBlue.withOpacity(0.5),
         child: Column(
           children: [
-            SafeArea(
+            const SafeArea(
               child: Image(
                 image: AssetImage('assets/images/ob-money.png'),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Container(
-              padding: EdgeInsets.all(33),
-              constraints: BoxConstraints.expand(
+              padding: const EdgeInsets.all(33),
+              constraints: const BoxConstraints.expand(
                 height: 300,
                 width: 350,
               ),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: kWhite,
                 borderRadius: BorderRadius.all(
                   Radius.circular(20),
@@ -41,7 +41,7 @@ class OnBoardingPage extends StatelessWidget {
                     'Welcome',
                     style: text24Semibold.copyWith(color: kBlack),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Text(
@@ -51,7 +51,7 @@ class OnBoardingPage extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 70,
                   ),
                   TextButton(
@@ -60,21 +60,21 @@ class OnBoardingPage extends StatelessWidget {
                       Navigator.pushNamedAndRemoveUntil(
                           context, '/main', (route) => false);
                     },
-                    child: Text(
-                      'Get Started',
-                      style: text14Semibold.copyWith(color: kWhite),
-                    ),
                     style: TextButton.styleFrom(
                       backgroundColor: kBlueRibbon,
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         vertical: 14,
                         horizontal: 36,
                       ),
-                      shape: RoundedRectangleBorder(
+                      shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
                       ),
+                    ),
+                    child: Text(
+                      'Get Started',
+                      style: text14Semibold.copyWith(color: kWhite),
                     ),
                   )
                 ],

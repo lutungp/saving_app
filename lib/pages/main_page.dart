@@ -19,10 +19,10 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
   static List<Widget> pages = [
-    HomePage(),
-    PortofolioPage(),
-    SupportPage(),
-    ProfilePage()
+    const HomePage(),
+    const PortofolioPage(),
+    const SupportPage(),
+    const ProfilePage()
   ];
 
   void _onItemTapped(int index) {
@@ -43,7 +43,7 @@ class _MainPageState extends State<MainPage> {
   Widget _customBottomNav() {
     return Container(
       height: 80,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: kWhite,
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(15),
@@ -53,7 +53,7 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.vertical(
+        borderRadius: const BorderRadius.vertical(
           top: Radius.circular(15),
         ),
         child: BottomNavigationBar(

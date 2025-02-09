@@ -39,15 +39,15 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                       Container(
-                        constraints: BoxConstraints.expand(
+                        constraints: const BoxConstraints.expand(
                           height: 40,
                           width: 40,
                         ),
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(10),
                             ),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: AssetImage('assets/images/user-img.png'),
                               fit: BoxFit.cover,
                             ),
@@ -61,13 +61,13 @@ class HomePage extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(height: 28),
+                  const SizedBox(height: 28),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 30),
-                    constraints: BoxConstraints.expand(height: 170),
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    constraints: const BoxConstraints.expand(height: 170),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(25)),
-                      image: DecorationImage(
+                      borderRadius: const BorderRadius.all(Radius.circular(25)),
+                      image: const DecorationImage(
                         image: AssetImage('assets/images/bg-container.png'),
                         fit: BoxFit.cover,
                       ),
@@ -86,26 +86,26 @@ class HomePage extends StatelessWidget {
                           'My Savings',
                           style: text13Reguler.copyWith(color: kWhite),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Text(
                           'Rp. 10.430.000',
                           style: text24Semibold.copyWith(color: kWhite),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         LinearPercentIndicator(
                           lineHeight: 4,
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                             horizontal: 0,
                           ),
                           progressColor: kEgyptianBlue,
                           percent: 0.3,
                           backgroundColor: kWhite,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 16,
                         ),
                         Text(
@@ -115,13 +115,13 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
                     children: [
                       _transactionButton('assets/icons/save.png', 'Save Money'),
-                      SizedBox(
+                      const SizedBox(
                         width: 25,
                       ),
                       _transactionButton('assets/icons/save.png', 'Save Money'),
@@ -134,7 +134,7 @@ class HomePage extends StatelessWidget {
               child:
                   DraggableScrollableSheet(builder: (context, scrollContainer) {
                 return Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: kWhite,
                     borderRadius: BorderRadius.vertical(
                       top: Radius.circular(40),
@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
                   child: Stack(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 18),
+                        margin: const EdgeInsets.only(top: 18),
                         child: SingleChildScrollView(
                           controller: scrollContainer,
                           child: Column(
@@ -160,7 +160,7 @@ class HomePage extends StatelessWidget {
                                       color: kLuckyBlue),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 31,
                               ),
                               _transactionList(
@@ -227,7 +227,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Column(
@@ -243,7 +243,7 @@ class HomePage extends StatelessWidget {
               )
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Text(
             amount,
             style: text13Semibold.copyWith(
@@ -258,10 +258,10 @@ class HomePage extends StatelessWidget {
   Widget _transactionButton(String icon, String text) {
     return Expanded(
       child: Container(
-        constraints: BoxConstraints.expand(
+        constraints: const BoxConstraints.expand(
           height: 60,
         ),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: kNightBlack,
           borderRadius: BorderRadius.all(
             Radius.circular(15),
@@ -275,7 +275,7 @@ class HomePage extends StatelessWidget {
               width: 24,
               color: kWhite,
             ),
-            SizedBox(
+            const SizedBox(
               width: 5,
             ),
             Text(
